@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Your Plan</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="cantainer">
+        <h2>Choose Your Plan</h2>
+        <div class="price-row">
+            <div class="price-col" id="basic-plan">
+                <p>Basic</p>
+                <h3>19$ / <span>month</span></h3>
+                <ul>
+                    <li>01 Website</li>
+                    <li>10 GB Disk Space</li>
+                    <li>Free Email Address</li>
+                    <li>Basic Email Builder</li>
+                    <li>No SSL Certificate</li>
+                    <li>Limited Support</li>
+                </ul>
+                <button onclick="addToCart('Basic')">Add To Cart</button>
+                <div class="info-tooltip">Basic Plan - A great start!</div>
+            </div>
+            <div class="price-col" id="advance-plan">
+                <p>Advance</p>
+                <h3>29$ / <span>month</span></h3>
+                <ul>
+                    <li>01 Website</li>
+                    <li>10 GB Disk Space</li>
+                    <li>Free Email Address</li>
+                    <li>Advanced Email Builder</li>
+                    <li>No SSL Certificate</li>
+                    <li>Priority Support</li>
+                </ul>
+                <button onclick="addToCart('Advance')">Add To Cart</button>
+                <div class="info-tooltip">Advance Plan - More advanced features!</div>
+            </div>
+            <div class="price-col" id="premium-plan">
+                <p>Premium</p>
+                <h3>39$ / <span>month</span></h3>
+                <ul>
+                    <li>01 Website</li>
+                    <li>50 GB Disk Space</li>
+                    <li>Free Email Address</li>
+                    <li>Premium Email Builder</li>
+                    <li>SSL Certificate</li>
+                    <li>24/7 Support</li>
+                </ul>
+                <button onclick="addToCart('Premium')">Add To Cart</button>
+                <div class="info-tooltip">Premium Plan - The best of the best!</div>
+            </div>
+        </div>
+
+        <div class="cart-icon" onclick="viewCart()">
+            <span class="cart-count">0</span>
+            <img src="./cart-128.webp" alt="Cart">
+        </div>
+    </div>
+
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-modal-content">
+            <h3>Your Cart</h3>
+            <ul id="cart-items">
+                <!-- Items will be dynamically added here -->
+            </ul>
+            <button onclick="closeCart()">Close</button>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
